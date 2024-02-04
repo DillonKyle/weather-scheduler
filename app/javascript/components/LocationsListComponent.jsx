@@ -5,6 +5,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 
 const host = import.meta.env.VITE_HOST
 
+
 function LocationsListComponent({ locations, deleteLocation }) {
 
   const handleDelete = (locationId) => {
