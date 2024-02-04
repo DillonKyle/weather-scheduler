@@ -4,13 +4,14 @@ import AddLocationComponent from './AddLocationComponent';
 import LocationsListComponent from './LocationsListComponent';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
+const host = import.meta.env.VITE_HOST
 
 function LocationContainer() {
   const [locations, setLocations] = useState([]);
 
   useEffect(() => {
     // Fetch the list of cities initially
-    axios.get('http://localhost:3000/api/v1/weather_data')
+    axios.get(`http://${host}/api/v1/weather_data`)
       .then(response => {
         console.log(response.data)
         setLocations(response.data);

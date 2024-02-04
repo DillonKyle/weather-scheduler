@@ -4,6 +4,8 @@ import locations from '../data/locations.json'; // Adjust the path as necessary
 
 import axios from 'axios';
 
+const host = import.meta.env.VITE_HOST
+
 function AddLocationComponent({ addLocation }) {
   const [selectedState, setSelectedState] = useState('');
   const [selectedCity, setSelectedCity] = useState('');
@@ -25,7 +27,7 @@ function AddLocationComponent({ addLocation }) {
   };
 
   const handleSubmit = () => {
-    axios.post('http://localhost:3000/api/v1/weather_data', { location: selectedCity })
+    axios.post(`http://${host}/api/v1/weather_data`, { location: selectedCity })
       .then((resp) => {
         console.log(resp.data)
         addLocation(resp.data)
