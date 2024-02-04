@@ -8,7 +8,7 @@ const host = import.meta.env.VITE_HOST
 function LocationsListComponent({ locations, deleteLocation }) {
 
   const handleDelete = (locationId) => {
-    axios.delete(`http://${host}/api/v1/weather_data/${locationId}`)
+    axios.delete(`${host}/api/v1/weather_data/${locationId}`)
       .then(() => {
         // Remove the location from the state to update the UI
         deleteLocation(locationId);

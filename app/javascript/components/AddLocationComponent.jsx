@@ -27,7 +27,7 @@ function AddLocationComponent({ addLocation }) {
   };
 
   const handleSubmit = () => {
-    axios.post(`http://${host}/api/v1/weather_data`, { location: selectedCity })
+    axios.post(`${host}/api/v1/weather_data`, { location: selectedCity })
       .then((resp) => {
         console.log(resp.data)
         addLocation(resp.data)

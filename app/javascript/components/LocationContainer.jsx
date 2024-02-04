@@ -11,7 +11,7 @@ function LocationContainer() {
 
   useEffect(() => {
     // Fetch the list of cities initially
-    axios.get(`http://${host}/api/v1/weather_data`)
+    axios.get(`${host}/api/v1/weather_data`)
       .then(response => {
         console.log(response.data)
         setLocations(response.data);
