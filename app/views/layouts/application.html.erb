@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WeatherScheduler</title>
+    <title>Weather Scheduler</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -18,12 +18,12 @@
     <%= vite_client_tag %>
 
     <%# Vite Tags for entrypoint files %>
-    <%# <%= vite_stylesheet_tag 'application', data: { "turbo-track": "reload" } %> %>
+    <%= vite_stylesheet_tag 'application', data: { "turbo-track": "reload" } %>
     <%= vite_javascript_tag 'index.jsx' %>
   </head>
 
   <body>
-    <div id="root" />
+    <div id="root"></div>
     <%= yield %>
   </body>
 </html>
