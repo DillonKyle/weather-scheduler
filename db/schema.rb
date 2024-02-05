@@ -15,7 +15,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_03_065200) do
   enable_extension "plpgsql"
 
   create_table "weather_data", force: :cascade do |t|
-    t.string "location"
+    t.string "name"
+    t.string "latitude"
+    t.string "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

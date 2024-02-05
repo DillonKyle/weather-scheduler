@@ -26,6 +26,6 @@ class Api::V1::WeatherDataController < ApplicationController
   private
 
   def weather_data_params
-    params.require(:weather_datum).permit(:location)
+    params.require(:weather_datum).permit(:name, :latitude, :longitude)
   end
 end
