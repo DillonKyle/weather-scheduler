@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   resources :homepage, only: [:index], as: "/"
   namespace :api do
     namespace :v1 do
-      resources :weather_data, only: [:index, :create, :destroy]
+      get 'locations/fetch_all', to: 'locations#fetch_all'
+      resources :locations, only: [:index, :create, :destroy]
     end
   end
 end

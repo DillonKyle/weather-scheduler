@@ -9,7 +9,7 @@ const host = import.meta.env.VITE_HOST
 function LocationsListComponent({ locations, deleteLocation }) {
 
   const handleDelete = (locationId) => {
-    axios.delete(`${host}/api/v1/weather_data/${locationId}`)
+    axios.delete(`${host}/api/v1/locations/${locationId}`)
       .then(() => {
         deleteLocation(locationId);
       })

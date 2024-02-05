@@ -14,7 +14,7 @@ const StoreLocationControl = ({
 
   const handleSubmit = () => {
     console.log(currentMarker)
-    axios.post(`${host}/api/v1/weather_data`, {
+    axios.post(`${host}/api/v1/locations`, {
       name: currentMarker.props.name,
       latitude: currentMarker.props.latitude,
       longitude: currentMarker.props.longitude,
@@ -33,7 +33,7 @@ const StoreLocationControl = ({
     <div style={{ position: 'absolute', top: 50, left: 10, zIndex: 1 }}>
       {currentMarker && (
       <Button variant="contained" onClick={handleSubmit}>
-        Send Location
+        Save Location
       </Button>
       )}
     </div>
