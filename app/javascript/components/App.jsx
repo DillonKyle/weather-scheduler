@@ -23,7 +23,6 @@ function App() {
   useEffect(() => {
     axios.get(`${host}/api/v1/locations`)
       .then(response => {
-        console.log(response.data)
         setLocations(response.data);
       })
       .catch(error => console.error('There was an error!', error));
@@ -44,7 +43,6 @@ function App() {
   const fetchWeather = () => {
     axios.get(`${host}/api/v1/locations/fetch_all`)
       .then(response => {
-        console.log(response.data)
         setWeatherData(response.data)
       })
       .catch(error => console.error('There was an error!', error));
@@ -53,8 +51,18 @@ function App() {
   return (
     <div>
     <Box sx={{ 
+      width: '100%',
+      bgcolor: 'background.paper',
+      textAlign: 'center',
+      padding: 5
+    }}>
+      <h1>Weather Scheduler</h1>
+      <h4><i>A 5 day forcast of days that are suitable to field work based on the presence of inclement weather</i></h4>
+    </Box>
+    <Box sx={{ 
       display: 'flex',
       flexDirection: 'row',
+      justifyContent: 'space-around',
       alignItems: 'center',
       width: '100%',
       bgcolor: 'background.paper',
@@ -99,7 +107,6 @@ function App() {
         </Map>
       </div>
     </Box>
-
     </div>
   );
 }

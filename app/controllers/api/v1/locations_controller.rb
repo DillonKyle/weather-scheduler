@@ -24,7 +24,7 @@ class Api::V1::LocationsController < ApplicationController
   end
 
   def fetch_all
-    api_key = ENV["WEATHER_API"] # Replace with your actual API key
+    api_key = ENV["WEATHER_API"]
     service = OpenWeatherMapService.new(api_key)
 
     locations = Location.all.map do |location|
@@ -59,8 +59,15 @@ class Api::V1::LocationsController < ApplicationController
             )
           end
         end
-        # Combine location info with weather data
-        { location_id: location.id, location_name: location.name, weather: response.parsed_response }
+        daily_weather = {}
+
+        data["list"].each do |entry|
+          date = Date.parse(entry["dt_txt"]).to_s
+          weather_main = entry["weather"].first["main"]
+          next if daily_weather[date] == "invalid"
+          daily_weather[date] = weather_main.include?("Rain") ? "invalid" : "valid"
+        end
+        { location_id: location.id, location_name: location.name, weather: daily_weather }
       else
         { location_id: location.id, error: "Failed to fetch weather data" }
       end
@@ -72,9 +79,6 @@ class Api::V1::LocationsController < ApplicationController
   private
 
   def locations_params
-    puts "*"*20
-    pp params
-    puts "*"*20
     params.require(:location).permit(:name, :latitude, :longitude)
   end
 end

@@ -13,7 +13,6 @@ const StoreLocationControl = ({
   const map = useMap();
 
   const handleSubmit = () => {
-    console.log(currentMarker)
     axios.post(`${host}/api/v1/locations`, {
       name: currentMarker.props.name,
       latitude: currentMarker.props.latitude,

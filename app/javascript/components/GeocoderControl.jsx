@@ -27,7 +27,6 @@ const GeocoderControl = ({
       geocoder.on('results', onResults);
       geocoder.on('result', (event) => {
         onResult(event);
-        console.log(event.result.place_name)
         const location = event.result?.center || (event.result?.geometry?.type === 'Point' && event.result.geometry.coordinates);
         if (location) {
           addMarker(<Marker name={event.result.place_name} longitude={location[0]} latitude={location[1]} />);

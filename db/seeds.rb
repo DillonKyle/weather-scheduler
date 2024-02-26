@@ -7,4 +7,3 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-Article.create([{ title: 'Test title 1', body: 'Test body 1' }, { title: 'Test title 2', body: 'Test body 2' }])

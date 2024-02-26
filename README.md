@@ -1,24 +1,14 @@
-# README
+# Weather Data App
+This app requires ruby, rails, and react to install and run.
+The setup can be troublesome and complicated so I will point out the files of interest.
+If youd like to see the application running, it is hosted on heroku here:
+https://csca5028-weather-scheduler-4a78e0f68e0d.herokuapp.com/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Database
+[Schema](./db/schema.rb)
 
-Things you may want to cover:
+## Service
+[Service that calls the Open Weather Data Api](./app/services/open_weather_map_service.rb)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Backend API
+[Method (fetch_all) that processes the request, retrieves the weather data for every saved location and stores then in the DB](./app/controllers/api/v1/locations_controller.rb#fetch_all)
