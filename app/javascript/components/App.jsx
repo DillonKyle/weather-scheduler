@@ -57,7 +57,7 @@ function App() {
       padding: 5
     }}>
       <h1>Weather Scheduler</h1>
-      <h4><i>A 5 day forcast of days that are suitable to field work based on the presence of inclement weather</i></h4>
+      <h4><i>A 5-day forecast of days that are suitable to field work based on the presence of inclement weather</i></h4>
     </Box>
     <Box sx={{ 
       display: 'flex',
