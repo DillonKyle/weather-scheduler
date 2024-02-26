@@ -95,6 +95,11 @@ GEM
       ruby2_keywords
     dry-cli (1.0.0)
     erubi (1.12.0)
+    factory_bot (6.4.6)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.4.3)
+      factory_bot (~> 6.4)
+      railties (>= 5.0.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
     httparty (0.21.0)
@@ -103,7 +108,7 @@ GEM
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     io-console (0.7.2)
-    irb (1.11.1)
+    irb (1.11.2)
       rdoc
       reline (>= 0.4.2)
     jbuilder (2.11.5)
@@ -121,7 +126,7 @@ GEM
       net-smtp
     marcel (1.0.2)
     mini_mime (1.1.5)
-    minitest (5.21.2)
+    minitest (5.22.2)
     msgpack (1.7.2)
     multi_xml (0.6.0)
     mutex_m (0.2.0)
@@ -135,17 +140,17 @@ GEM
     net-smtp (0.4.0.1)
       net-protocol
     nio4r (2.7.0)
-    nokogiri (1.16.0-aarch64-linux)
+    nokogiri (1.16.2-aarch64-linux)
       racc (~> 1.4)
-    nokogiri (1.16.0-arm-linux)
+    nokogiri (1.16.2-arm-linux)
       racc (~> 1.4)
-    nokogiri (1.16.0-arm64-darwin)
+    nokogiri (1.16.2-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.16.0-x86-linux)
+    nokogiri (1.16.2-x86-linux)
       racc (~> 1.4)
-    nokogiri (1.16.0-x86_64-darwin)
+    nokogiri (1.16.2-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.16.0-x86_64-linux)
+    nokogiri (1.16.2-x86_64-linux)
       racc (~> 1.4)
     pg (1.5.4)
     psych (5.1.2)
@@ -153,7 +158,7 @@ GEM
     puma (6.4.2)
       nio4r (~> 2.0)
     racc (1.7.3)
-    rack (3.0.9)
+    rack (3.0.9.1)
     rack-cors (2.0.1)
       rack (>= 2.0.0)
     rack-proxy (0.7.7)
@@ -197,7 +202,7 @@ GEM
     rake (13.1.0)
     rdoc (6.6.2)
       psych (>= 4.0.0)
-    reline (0.4.2)
+    reline (0.4.3)
       io-console (~> 0.5)
     rspec-core (3.13.0)
       rspec-support (~> 3.13.0)
@@ -207,15 +212,15 @@ GEM
     rspec-mocks (3.13.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-rails (5.0.3)
-      actionpack (>= 5.2)
-      activesupport (>= 5.2)
-      railties (>= 5.2)
-      rspec-core (~> 3.10)
-      rspec-expectations (~> 3.10)
-      rspec-mocks (~> 3.10)
-      rspec-support (~> 3.10)
-    rspec-support (3.13.0)
+    rspec-rails (6.1.1)
+      actionpack (>= 6.1)
+      activesupport (>= 6.1)
+      railties (>= 6.1)
+      rspec-core (~> 3.12)
+      rspec-expectations (~> 3.12)
+      rspec-mocks (~> 3.12)
+      rspec-support (~> 3.12)
+    rspec-support (3.13.1)
     ruby2_keywords (0.0.5)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
@@ -251,7 +256,7 @@ GEM
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    zeitwerk (2.6.12)
+    zeitwerk (2.6.13)
 
 PLATFORMS
   aarch64-linux
@@ -265,6 +270,7 @@ DEPENDENCIES
   bootsnap
   cssbundling-rails
   debug
+  factory_bot_rails
   httparty
   jbuilder
   jsbundling-rails
@@ -272,7 +278,7 @@ DEPENDENCIES
   puma (>= 5.0)
   rack-cors
   rails (~> 7.1.3)
-  rspec-rails (~> 5.0.0)
+  rspec-rails
   sprockets-rails
   stimulus-rails
   turbo-rails

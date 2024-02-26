@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_05_062954) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_26_054221) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -45,6 +45,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_05_062954) do
     t.datetime "dt_txt"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "location_id", null: false
+    t.index ["location_id"], name: "index_weather_reports_on_location_id"
   end
 
+  add_foreign_key "weather_reports", "locations"
 end

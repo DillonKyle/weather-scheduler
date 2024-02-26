@@ -7,6 +7,5 @@ class Createlocations < ActiveRecord::Migration[7.1]
       
       t.timestamps
     end
-    add_reference :weather_reports, :location, foreign_key: true
   end
 end
