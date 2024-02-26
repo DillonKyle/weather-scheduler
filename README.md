@@ -12,3 +12,6 @@ https://csca5028-weather-scheduler-4a78e0f68e0d.herokuapp.com/
 
 ## Backend API
 [Method (fetch_all) that processes the request, retrieves the weather data for every saved location and stores then in the DB](./app/controllers/api/v1/locations_controller.rb#fetch_all)
+
+## Tests
+[Unit Tests for the backend api](./spec/controllers/api/v1/locations_controller_spec.rb)
