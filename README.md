@@ -1,8 +1,6 @@
 # Weather Data App
 This app requires ruby, rails, and react to install and run.
 The setup can be troublesome and complicated so I will point out the files of interest.
-If youd like to see the application running, it is hosted on heroku here:
-https://csca5028-weather-scheduler-4a78e0f68e0d.herokuapp.com/
 
 ## Database
 [Schema](./db/schema.rb)
